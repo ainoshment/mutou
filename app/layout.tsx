@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +31,7 @@ export default function RootLayout({
           <ul className="flex gap-4">
             {navItems.map((item) => (
               <li key={item.label}>
-                <Button variant="ghost" asChild>
+                <Button variant="ghost" asChild={true}>
                   <Link href={item.href}>{item.label}</Link>
                 </Button>
               </li>
