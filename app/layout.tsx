@@ -49,7 +49,7 @@ export default function RootLayout({
           <ul className="flex gap-4">
             {navItems.map((item) => (
               <li key={item.label}>
-                <Button variant="ghost" asChild={true}>
+                <Button variant="ghost" asChild>
                   <Link href={item.href}>{item.label}</Link>
                 </Button>
               </li>
